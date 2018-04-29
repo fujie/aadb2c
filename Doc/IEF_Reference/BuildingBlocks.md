@@ -37,6 +37,10 @@ In this section, you can define claim trasfomation rules.
 #### Parameters
 - Id
 - TransformationMethod
+    - InputParameter
+        - Id
+        - DataType
+        - Value
     - InputClaims
         - InputClaim
             - ClaimTypeReferenceId
@@ -46,3 +50,8 @@ In this section, you can define claim trasfomation rules.
             - ClaimTypeReferenceId
             - TransformationClaimType
             
+| TransformationMethod | Description | InputParameter | InputClaims | OutputClaims |
+|:------------|:------------|:------------|:------------|:------------|
+| AddItemToStringCollection | Add string item to StringCollection | | item to add, target collection | result collection |
+| CreateRandomString | Return random string | Id: randomGeneratorType, DataType: string, Value: string | | outputClaim |
+| FormatStringClaim | Format string | Id:stringFormat, DataType: string, Value: format | inputClaim | outputClaim |
