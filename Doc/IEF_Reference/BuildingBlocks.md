@@ -53,6 +53,26 @@ In this section, you can define claim trasfomation rules.
 | TransformationMethod | Description | InputParameter | InputClaims | OutputClaims |
 |:------------|:------------|:------------|:------------|:------------|
 | AddItemToStringCollection | Add string item to StringCollection | | item to add<br>target collection | result collection |
-| CreateRandomString | Return random string | Id: randomGeneratorType<br>DataType: string<br>Value: string | | outputClaim |
-| FormatStringClaim | Format string | Id:stringFormat<br>DataType: string<br>Value: format | inputClaim | outputClaim |
-CreateAlternativeSecurityId | Create Alternative Security Id string from IdP and userId | | key<br>identityProvider | alternativeSecurityId |
+| CreateRandomString | Return random string | Id: randomGeneratorType<br>DataType: string<br>Value: string | | created string |
+| FormatStringClaim | Format string | Id: stringFormat<br>DataType: string<br>Value: format | inputClaim | formatted string |
+| CreateAlternativeSecurityId | Create Alternative Security Id string from IdP and userId | | key: socialIdPUserId<br>identityProvider: IdP name | created string |
+| CreateStringClaim | Create string claim | id: value<br>DataType: string<br>Value: not supported | | created string |
+
+## ClientDefinitions
+### ClientDefinition
+#### Parameters
+- Id
+    - ClientUIFilterFlags
+
+## ContentDefinitions
+### ContentDefinition
+#### Parameters
+- Id
+    - LoadUri
+    - RecoveryUri
+    - DataUri
+    - Metadata
+        - Item
+            - Key
+                - DisplayName
+                - language.intro
