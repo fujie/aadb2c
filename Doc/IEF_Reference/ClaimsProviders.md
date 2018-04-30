@@ -37,4 +37,9 @@
     - UseTechnicalProfileForSessionManagement
         - ReferenceId
         
-        
+#### Value table for Protocol
+| Name | Description | Metadata key | Metadata value |
+|:--|:--|:--|:--|
+| OAuth2 | OAuth2.0 | ProviderName | Identity Provider Name |
+| | | authorization_endpoint | Authorization Endpoint |
+
