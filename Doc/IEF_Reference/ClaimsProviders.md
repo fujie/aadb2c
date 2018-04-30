@@ -69,3 +69,8 @@
 | | | SendTokenResponseBodyWithJsonNumbers | |
 | | | IssuerUri | SAML Token Issuer Uri |
 | | | TokenLifeTimeInSeconds | SAML Token lifetime |
+
+#### Technical profile for Azure AD REST API
+| Id | Description | Operation | InputClaimsTransformations | InputClaims | PersistedClaims | OutputClaims |
+|:--|:--|:--|:--|:--|:--|:--|
+| AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | AlternativeSecurityId(Required) | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser |
