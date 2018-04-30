@@ -8,6 +8,7 @@
     - DisplayName
     - Protocol
         - Name
+        - Handler
     - OutputTokenFormat
     - Metadata
         - Item
@@ -34,12 +35,37 @@
     - OutputClaimsTransformations
         - OutputClaimsTransformation
             - ReferenceId
+    - ValidationTechnicalProfiles
+        - ValidationTechnicalProfile
+            - ReferenceId
+    - IncludeInSso
     - UseTechnicalProfileForSessionManagement
         - ReferenceId
         
-#### Value table for Protocol
+#### Value table for Protocol/Metadata
 | Name | Description | Metadata key | Metadata value |
 |:--|:--|:--|:--|
 | OAuth2 | OAuth2.0 | ProviderName | Identity Provider Name |
 | | | authorization_endpoint | Authorization Endpoint |
-
+| | | AccessTokenEndpoint | Token Endpoint|
+| | | ClaimsEndpoint | Profile Endpoint |
+| | | client_id | client id |
+| | | HttpBinding | Binding method for xxx endpoint |
+| | | UsePolicyInRedirectUri | |
+| OpenIdConnect | OpenID Connect | METADATA | discovery(well-known) endpoint uri |
+| | | ProviderName | Identity Provider Name |
+| | | authorization_endpoint | Authorization Endpoint |
+| | | client_id | client id |
+| | | IdTokenAudience | aud |
+| | | response_types | response type |
+| | | scope | scope |
+| | | UsePolicyInRedirectUri | |
+| Proprietary | REST API(for AAD/Self Asserted/Session Management) | ApplicationObjectId | Application Object Id |
+| | | ClientId | client id |
+| | | ContentDefinitionReferenceId | |
+| | | AlwaysFetchClaimsFromProvider | |
+| None | None(for Trustframework Policy Engine/Token Issuer) | url | |
+| | | issuer_refresh_token_user_identity_claim_type | |
+| | | SendTokenResponseBodyWithJsonNumbers | |
+| | | IssuerUri | SAML Token Issuer Uri |
+| | | TokenLifeTimeInSeconds | SAML Token lifetime |
