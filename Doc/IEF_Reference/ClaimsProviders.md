@@ -77,4 +77,4 @@
 | AAD-UserReadUsingAlternativeSecurityId | Read user from Azure AD with Alternative Security Id | Read | | [Required]<br>AlternativeSecurityId | | objectId | AAD-Common |
 | AAD-UserReadUsingAlternativeSecurityId-NoError | Read user from Azure AD with Alternative Security Id | | | | | | AAD-UserReadUsingAlternativeSecurityId |
 | AAD-UserWriteProfileUsingObjectId | Update user profile with object Id | Write | | [Required]<br>objectId | objectId | | AAD-Common |
-| AAD-UserReadUsingObjectId| Read user from Azure AD with object Id | Read | [Required]<br>objectId | | | AAD-Common |
+| AAD-UserReadUsingObjectId| Read user from Azure AD with object Id | Read | | [Required]<br>objectId | | | AAD-Common |
