@@ -71,7 +71,8 @@
 | | | TokenLifeTimeInSeconds | SAML Token lifetime |
 
 #### Technical profile for Azure AD REST API
-| Id | Description | Operation | InputClaimsTransformations | InputClaims | PersistedClaims | OutputClaims |
-|:--|:--|:--|:--|:--|:--|:--|
-| AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | [Required]<br>AlternativeSecurityId | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser |
-| AAD-UserReadUsingAlternativeSecurityId | Read user from Azure AD with Alternative Security Id | Read | | [Required]<br>AlternativeSecurityId | objectId | 
+| Id | Description | Operation | InputClaimsTransformations | InputClaims | PersistedClaims | OutputClaims | Inherited |
+|:--|:--|:--|:--|:--|:--|:--|:--|
+| AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | [Required]<br>AlternativeSecurityId | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser | AAD-Common |
+| AAD-UserReadUsingAlternativeSecurityId | Read user from Azure AD with Alternative Security Id | Read | | [Required]<br>AlternativeSecurityId | | objectId | AAD-Common |
+| AAD-UserReadUsingAlternativeSecurityId-NoError | Read user from Azure AD with Alternative Security Id | | | | | AAD-UserReadUsingAlternativeSecurityId |
