@@ -52,6 +52,7 @@ In this section, you can define claim trasfomation rules.
             
 | TransformationMethod | Description | InputParameter | InputClaims | OutputClaims |
 |:------------|:------------|:------------|:------------|:------------|
-| AddItemToStringCollection | Add string item to StringCollection | | item to add, target collection | result collection |
-| CreateRandomString | Return random string | Id: randomGeneratorType, DataType: string, Value: string | | outputClaim |
-| FormatStringClaim | Format string | Id:stringFormat, DataType: string, Value: format | inputClaim | outputClaim |
+| AddItemToStringCollection | Add string item to StringCollection | | item to add<br>target collection | result collection |
+| CreateRandomString | Return random string | Id: randomGeneratorType<br>DataType: string<br>Value: string | | outputClaim |
+| FormatStringClaim | Format string | Id:stringFormat<br>DataType: string<br>Value: format | inputClaim | outputClaim |
+CreateAlternativeSecurityId | Create Alternative Security Id string from IdP and userId | | key<br>identityProvider | alternativeSecurityId |
