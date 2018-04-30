@@ -1,1 +1,40 @@
 # ClaimsProviders
+## ClaimsProvider
+### Parameters
+- Domain
+- DisplayName
+- TechnicalProfiles
+    - Id
+    - DisplayName
+    - Protocol
+        - Name
+    - OutputTokenFormat
+    - Metadata
+        - Item
+            - Key
+    - CryptographicKeys
+        - Key
+            - Id
+            - StorageReferenceId
+    - InputClaims
+        - InputClaim
+            - ClaimTypeReferenceId
+            - PartnerClaimType
+            - Required
+    - PersistedClaims
+        - PersistedClaim
+            - ClaimTypeReferenceId
+            - OverwriteIfExists
+            - DefaultValue
+    - OutputClaims
+        - OutputClaim
+            - ClaimTypeReferenceId
+            - PartnerClaimType
+            - DefaultValue
+    - OutputClaimsTransformations
+        - OutputClaimsTransformation
+            - ReferenceId
+    - UseTechnicalProfileForSessionManagement
+        - ReferenceId
+        
+        
