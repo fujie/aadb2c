@@ -73,4 +73,5 @@
 #### Technical profile for Azure AD REST API
 | Id | Description | Operation | InputClaimsTransformations | InputClaims | PersistedClaims | OutputClaims |
 |:--|:--|:--|:--|:--|:--|:--|
-| AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | AlternativeSecurityId(Required) | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser |
+| AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | [Required]<br>AlternativeSecurityId | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser |
+| AAD-UserReadUsingAlternativeSecurityId | Read user from Azure AD with Alternative Security Id | Read | | [Required]<br>AlternativeSecurityId | objectId | 
