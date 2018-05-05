@@ -52,11 +52,20 @@ In this section, you can define claim trasfomation rules.
             
 | TransformationMethod | Description | InputParameter | InputClaims | OutputClaims |
 |:------------|:------------|:------------|:------------|:------------|
-| AddItemToStringCollection | Add string item to StringCollection | | item to add<br>target collection | result collection |
-| CreateRandomString | Return random string | Id: randomGeneratorType<br>DataType: string<br>Value: string | | created string |
-| FormatStringClaim | Format string | Id: stringFormat<br>DataType: string<br>Value: format | inputClaim | formatted string |
-| CreateAlternativeSecurityId | Create Alternative Security Id string from IdP and userId | | key: socialIdPUserId<br>identityProvider: IdP name | created string |
-| CreateStringClaim | Create string claim | id: value<br>DataType: string<br>Value: not supported | | created string |
+| AddItemToStringCollection | Add the provided string claim to a that contains collection of strings item (String) collection (StringCollection) | | item to add<br>target collection | result collection |
+| AddParameterToStringCollection | Add the provided string parameter to a claim that contains collection of strings collection | | | |
+| AssertStringClaimsAreEqual | Compare two claims, and throws an exception if they are not equal according to the specified comparison inputClaim1 (String) stringComparison [ordinal, ordinalIgnoreCase] | | | |
+| ChangeCase | Change the case of the provided string claim to the one specified inputClaim1 (String) toCase [lower, upper] outputClaim (String) | | | |
+| CompareClaimToValue | Compare claim to the provided parameter, and returns a claim with true indicating that the values match, false otherwise inputClaim1 (String) operator [equal, not equal] outputClaim (Boolean) | | | |
+| CompareClaims | Compares two claims and returns a claim with true indicating that the claims match, false otherwise inputClaim1 (String) operator [equal, not equal] outputClaim (Boolean) | | | |
+| CreateAlternativeSecurityId | Creates a JSON representation of the user’s alternativeSecurityId property that can be used in calls to Graph API. This string is consumed by the Azure AD claims provider when PartnerClaimType is alternativeSecurityId key (String) alternativeSecurityId | | key: socialIdPUserId<br>identityProvider: IdP name | created string |
+| CreateStringClaim | Creates a string claim from the provided parameter in the policy value (String) createdClaim (String) | id: value<br>DataType: string<br>Value: not supported | | created string |
+| CreateRandomString | Creates a random string using the random number generator used. If the random number generator is of type “integer”, optionally a seed parameter and a maximum number may be provided. An optional string format parameter allows the output to be formatted using it, and an optional base64 parameter specifies whether the output is base64 encoded randomGeneratorType [guid, integer] outputClaim (String) | Id: randomGeneratorType<br>DataType: string<br>Value: string | | created string |
+| FormatStringClaim | Format a given claim according to the provided format string. This transformation uses the C# String.Format method. Please see its documentation for more details inputClaim (String) stringFormat (String) outputClaim (String) | Id: stringFormat<br>DataType: string<br>Value: format | inputClaim | formatted string |
+| GetClaimFromJson | Given a JSON string of key value pairs, extract the specified claim inputJson (String) claimToExtract (String) extractedClaim (String) | | | |
+| GetSingleItemFromStringCollection | Gets the first item from the provided string collection. This transformation should ideally be renamed to GetFirstItemFromStringCollection collection (StringCollection) - optional extractedItem (String) | | | |
+| GetSingleValueFromJsonArray | Gets the first item from the provided JSON string. This transformation should ideally be renamed to GetFirstItemFromJsonArray. inputJsonClaim (String) extractedClaim (String) | | | |
+| Hash | Hash the provided plain text using the salt and a secret whose identifier is provided as a parameter plaintext (String) randomizerSecret (String) hash (String) | | | |
 
 ## ClientDefinitions
 ### ClientDefinition
