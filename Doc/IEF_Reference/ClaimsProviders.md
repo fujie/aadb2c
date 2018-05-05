@@ -42,7 +42,7 @@
     - UseTechnicalProfileForSessionManagement
         - ReferenceId
         
-#### Value table for Protocol/Metadata
+#### Values for Protocol/Metadata
 | Name | Description | Metadata key | Metadata value |
 |:--|:--|:--|:--|
 | OAuth2 | OAuth2.0 | ProviderName | Identity Provider Name |
@@ -70,7 +70,7 @@
 | | | IssuerUri | SAML Token Issuer Uri |
 | | | TokenLifeTimeInSeconds | SAML Token lifetime |
 
-#### Technical profile for Azure AD REST API
+#### Technical profile values for Azure AD REST API
 | Id | Description | Operation | InputClaimsTransformations | InputClaims | PersistedClaims | OutputClaims | Inherited |
 |:--|:--|:--|:--|:--|:--|:--|:--|
 | AAD-UserWriteUsingAlternativeSecurityId | Write user by Alternative Security Id | Write | CreateOtherMailsFromEmail | [Required]<br>AlternativeSecurityId | alternativeSecurityId<br>userPrincipalName<br>mailNickName<br>displayName | objectId<br>newUser | AAD-Common |
