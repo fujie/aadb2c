@@ -76,3 +76,13 @@ In this section, you can define claim trasfomation rules.
             - Key
                 - DisplayName
                 - language.intro
+
+#### Values for ContentDefinition Id
+| Value | Description |
+|:--|:--|
+| api.signuporsignin | Show SignIn and SignUp page |
+| api.idpselections | Show Claims Provider selection page |
+| api.idpselections.signup | Show Claims Provider selection page |
+| api.error | Show error page |
+| api.selfasserted | Show self claim assertion page |
+| api.selfasserted.profileupdate | Show profile update page |
